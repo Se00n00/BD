@@ -4,119 +4,43 @@
       "section": "Overview",
       "content": {
         "title": "Study Overview",
-        "description": "This study focuses on preprocessing methylation data from The Cancer Genome Atlas (TCGA) for Lung Adenocarcinoma (LUAD) and Lung Squamous Cell Carcinoma (LUSC) to identify potential cancer biomarkers. The analysis leverages CpG and gene-level methylation profiles, processed using Python with pandas and numpy libraries.",
-        "context": "Conducted as part of a 6th Semester Research Project titled 'Biomarker Cancer Identification and Prediction' at an academic institution.",
-        "objective": "To prepare a combined dataset for downstream biomarker analysis by cleaning, transforming, and integrating TCGA methylation data."
+        "description": "In this study Rishabh focused on preprocessing methylation data from The Cancer Genome Atlas (TCGA) for Lung Adenocarcinoma (LUAD) and Lung Squamous Cell Carcinoma (LUSC) to identify potential cancer biomarkers. The analysis leverages CpG and gene-level methylation profiles, processed using Python with pandas and numpy libraries.",
+        "sauravdesription":"While Saurav cancer is one of the most prevalent types of cancer worldwide. Identifying differentially expressed genes (DEGs) can help in early detection and understanding disease mechanisms. This study focuses on preprocessing and analyzing microarray data from the E-MEXP-3756 dataset, using statistical and bioinformatics techniques in R.",
+        "mohitdescription":"While Mohit focused on proteomic datasets for cardiovascular, melanin, and respiratory diseases, his research extended to analyzing methylation data from The Cancer Genome Atlas (TCGA) for Lung Adenocarcinoma (LUAD) and Lung Squamous Cell Carcinoma (LUSC) to identify potential cancer biomarkers. The study leveraged CpG and gene-level methylation profiles, processed using Python with pandas and numpy libraries to extract meaningful insights."
+      }
+    },
+    {
+      "section": "Intuition",
+      "content": {
+        "title": "Intution",
+        "description":"The selection of diseases, including cardiovascular, respiratory, and neoplastic conditions, was driven by their high mortality rates in India, as highlighted in statistical reports. Cardiovascular diseases emerged as the leading cause of death, followed closely by respiratory diseases and malignant neoplasms, making them critical areas for biomarker identification and early detection strategies.",
+        "imagelist":[
+          {"image":"images/reason1.png"},
+          {"image":"images/reason2.png"}
+        ]
+        
       }
     },
     {
       "section": "Datasets",
       "content": {
-        "title": "Methylation Datasets",
-        "description": "The study utilizes four methylation datasets from TCGA, processed on January 28, 2016, using the Illumina HumanMethylation450 BeadChip (Meth450) platform by Johns Hopkins University and USC.",
-        "source": "Firehose Methylation Preprocessor, Broad Institute",
-        "datasets": [
-          {
-            "id": "LUAD_CpG",
-            "name": "TCGA-LUAD CpG Methylation",
-            "file": "Human__TCGA_LUAD__JHU_USC__Methylation__Meth450__01_28_2016__BI__CpG__Firehose_Methylation_Prepocessor.csv",
-            "total_rows": 40230,
-            "total_columns": 459,
-            "sample_columns": ["TCGA.05.4384", "TCGA.05.4390", "TCGA.S2.AA1A"],
-            "sample_data": [
-              {"attrib_name": "RBL2_cg00000029", "TCGA.05.4384": -0.2285, "TCGA.05.4390": -0.2701, "TCGA.S2.AA1A": -0.1977},
-              {"attrib_name": "VDAC3_cg00000236", "TCGA.05.4384": 0.3194, "TCGA.05.4390": 0.3470, "TCGA.S2.AA1A": 0.3732}
-            ],
-            "notes": "Contains CpG site-specific methylation values for 459 LUAD samples."
-          },
-          {
-            "id": "LUAD_Gene",
-            "name": "TCGA-LUAD Gene Methylation",
-            "file": "Human__TCGA_LUAD__JHU_USC__Methylation__Meth450__01_28_2016__BI__Gene__Firehose_Methylation_Prepocessor.csv",
-            "total_rows": 20115,
-            "total_columns": 459,
-            "sample_columns": ["TCGA.05.4384", "TCGA.05.4390", "TCGA.S2.AA1A"],
-            "sample_data": [
-              {"attrib_name": "RBL2", "TCGA.05.4384": -0.2285, "TCGA.05.4390": -0.2701, "TCGA.S2.AA1A": -0.1977},
-              {"attrib_name": "VDAC3", "TCGA.05.4384": -0.0661, "TCGA.05.4390": -0.2346, "TCGA.S2.AA1A": -0.0783}
-            ],
-            "notes": "Aggregated gene-level methylation data for 459 LUAD samples."
-          },
-          {
-            "id": "LUSC_CpG",
-            "name": "TCGA-LUSC CpG Methylation",
-            "file": "Human__TCGA_LUSC__JHU_USC__Methylation__Meth450__01_28_2016__BI__CpG__Firehose_Methylation_Prepocessor.csv",
-            "total_rows": 40230,
-            "total_columns": 371,
-            "sample_columns": ["TCGA.18.3417", "TCGA.18.4721", "TCGA.XC.AA0X"],
-            "sample_data": [
-              {"attrib_name": "RBL2_cg00000029", "TCGA.18.3417": -0.2688, "TCGA.18.4721": -0.1890, "TCGA.XC.AA0X": -0.2029},
-              {"attrib_name": "VDAC3_cg00000236", "TCGA.18.3417": 0.4057, "TCGA.18.4721": 0.3710, "TCGA.XC.AA0X": 0.3624}
-            ],
-            "notes": "CpG site-specific methylation values for 371 LUSC samples."
-          },
-          {
-            "id": "LUSC_Gene",
-            "name": "TCGA-LUSC Gene Methylation",
-            "file": "Human__TCGA_LUSC__JHU_USC__Methylation__Meth450__01_28_2016__BI__Gene__Firehose_Methylation_Prepocessor.csv",
-            "total_rows": 20115,
-            "total_columns": 371,
-            "sample_columns": ["TCGA.18.3417", "TCGA.18.4721", "TCGA.XC.AA0X"],
-            "sample_data": [
-              {"attrib_name": "RBL2", "TCGA.18.3417": 0.032294, "TCGA.18.4721": 0.028794, "TCGA.XC.AA0X": null},
-              {"attrib_name": "VDAC3", "TCGA.18.3417": 0.020247, "TCGA.18.4721": 0.009632, "TCGA.XC.AA0X": null}
-            ],
-            "notes": "Aggregated gene-level methylation data for 371 LUSC samples."
-          }
-        ]
+        "title": "Datasets",
+        "description": "The study utilizes four methylation datasets from TCGA, processed on January 28, 2016, using the Illumina HumanMethylation450 BeadChip (Meth450) platform by Johns Hopkins University and USC. while Saurav had E-MEXP-3756 (ArrayExpress) with  CEL files (expression data), SDRF file (Sample and Data Relationship Format) (sample metadata), IDF file (experiment description)"
+        
       }
-    },
-    {
-      "section": "Preprocessing Steps",
-      "content": {
-        "title": "Preprocessing Workflow",
-        "description": "The preprocessing pipeline prepares the methylation data for analysis by loading, transforming, and combining datasets.",
-        "subsections": [
-          {
-            "title": "Data Loading",
-            "steps": [
-              "Imported Python libraries: pandas for data manipulation and numpy for numerical operations.",
-              "Loaded four CSV files into pandas DataFrames: df_methylation_1_cpg (LUAD CpG), df_methylation_2_gene (LUAD Gene), df_methylation_3_cpg (LUSC CpG), df_methylation_4_gene (LUSC Gene)."
-            ],
-            "purpose": "To initialize the datasets for subsequent processing."
-          },
-          {
-            "title": "Data Transformation",
-            "steps": [
-              "Transposed gene-level methylation DataFrames (LUAD and LUSC) to reorient data with samples as rows and genes as columns.",
-              "Assigned binary labels: 0 for LUAD samples, 1 for LUSC samples, to enable classification tasks.",
-              "Resulting transformed shapes: LUAD (458 samples, 20115 genes), LUSC (371 samples, 20115 genes)."
-            ],
-            "purpose": "To standardize data format and label samples for machine learning analysis."
-          },
-          {
-            "title": "Data Combination",
-            "steps": [
-              "Combined transformed LUAD and LUSC gene methylation DataFrames using pd.concat along the row axis.",
-              "Resulting combined DataFrame shape: (40230 rows, 829 columns), reflecting merged gene-level data with sample-specific columns.",
-              "Preserved attrib_name column to identify genes across samples."
-            ],
-            "purpose": "To create a unified dataset for comparative analysis between LUAD and LUSC."
-          }
-        ]
-      }
-    },
+    }
+    
+    ,
     {
       "section": "Observations",
       "content": {
         "title": "Key Observations",
-        "description": "Insights derived from the preprocessing of TCGA methylation data.",
+        "description": "Insights derived from the preprocessing of Genomic and Sequential Data.",
         "categories": [
           {
             "category": "Dataset Characteristics",
             "points": [
-              "LUAD datasets (CpG and Gene) include 459 samples, with CpG data spanning 40230 CpG sites and gene data covering 20115 genes.",
-              "LUSC datasets (CpG and Gene) include 371 samples, with similar CpG and gene coverage."
+              "Rishabh Used, LUAD datasets (CpG and Gene) which includes 459 samples, with CpG data spanning 40230 CpG sites and gene data covering 20115 genes it also included 371 samples, with similar CpG and gene coverage."
             ]
           },
           {
@@ -126,9 +50,19 @@
             ]
           },
           {
-            "category": "Gene Profiles",
+            "category": "Sequence Profiles",
             "points": [
               "Genes such as RBL2, VDAC3, ACTN1, ATP2A1, and SFRP1 exhibit distinct methylation profiles across LUAD and LUSC samples, suggesting potential biomarker candidates."
+            ]
+          },
+          {
+            "category":" ",
+            "images":[
+              {"image":"images/rishabhdataconclusion.png.jpg"},
+              {"image":"images/Boxplot.png"},
+              {"image":"images/AfterNormallization.png"},
+              {"image":"images/sequence.png"},
+              {"image":"images/healthyvsColorectal.png"}
             ]
           }
         ]
