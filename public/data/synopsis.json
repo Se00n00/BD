@@ -1,0 +1,118 @@
+[
+    {
+        "type": "SWOT Analysis",
+        "description": "To Ensure the robustness and ethical concerns, this SWOT (Strengths, Weakness, Opportunities, and Threats) analysis evalutes the potential impact of Using ML technqiues in Predicting Biomakers.",
+        "list_pairs": [
+            {
+                "title": "Strengths",
+                "content": [
+                    "Using XAI approaches with state of the art models (SOTA) would lead to Increase of Trust in AI assited Biomakers Discovery, as this would simplify the interpretibility and transparency in early diagnostic.",
+                    "While On the other hand, Deep Learning model could help to uncover complex patterns in biological data to solve complex problems such as identification of molecular signatures, identification of disease subtypes through genomic sequences.",
+                    "An Efficeint AI pipeline using this approach could help enabling scalability in personalized medicine and accelerated research on biomakers analysis and prediction."
+                ]
+            },
+            {
+                "title": "Weakness",
+                "content": [
+                    "As shallow the models gets, it becomes more hungrier for data, though its not the true in case of supply, creating high quality curated datasets for training is still a challenging task as these require domain experts where required constrained often faces with class imbalances and missing values.",
+                    "Nevertheless, the major ethical concern remain high about the patient privacy and data sequirity, with regulatory frameworks like GDPR and HIPAA's strict enforces guidlines on data usage, it almost becomes difficult for collecting required amount of datasets for the desired cases. On the top of these all, the predictions must ensure ethical compliance and prevent misuse in genetic profiling and insurance discrimination."
+                ]
+            },
+            {
+                "title": "Opportunities",
+                "content": [
+                    "Apart from aiding in early disease detection, using AI techniques integreated with XAI would help enabling personalized diagnostic leading to better patient outcomes.",
+                    "On Contray, this approach would help institutions and pharmaceuticals to reduce drug development time by identifying biomarker-based drug targets while driving a global collaboration between bioinformaticians, medical professional, domain experts and AI researchers creating a space for improvement in global healthcare solutions."
+                ]
+            },
+            {
+                "title": "Threats",
+                "content": [
+                    "AI assited aid often face many regulatory and compliance barriers which differes in all contries, as these are subjected to strict regulatory frameworks and required to pass clinical validation trails which further hinders the process of quick implementation.",
+                    "The AI Driven assitance often need to be highly customized and interpreable in sense of healthcare professionals as limited interpretibility could create issues which could left them struggle with interpretation of prediction results.",
+                    "On the other hand, AI researchers must ensure the fairness in quality and quantity of training data to avoid overfitting and reinforcing existing biases which could disproportionately affect under-represented group and populations."
+                ]
+            }
+        ]
+    },
+    {
+        "type": "references",
+        "values": [
+            {
+                "title": "Enlightening the path to NSCLC biomarkers: Utilizing the power of XAI-guided deep learning. Computer Methods and Programs in Biomedicine",
+                "author": "Dwivedi, K., Rajpal, A., Rajpal, S., Kumar, V., Agarwal, M., & Kumar, N. (2024)",
+                "link": "https://doi.org/10.1016/j.cmpb.2023.107864"
+            },
+            {
+                "title": "Gene Expression Omnibus: NCBI gene expression and hybridization array data repository",
+                "author": "Edgar, R., Domrachev, M., & Lash, A. E. (2002)",
+                "link": ""
+            },
+            {
+                "title": "Deep learning-enabled medical computer vision",
+                "author": "Esteva, A., et al. (2019)",
+                "link": ""
+            },
+            {
+                "title": "Machine learning applications in cancer prognosis and prediction",
+                "author": "Kourou, K., et al. (2015)",
+                "link": ""
+            },
+            {
+                "title": "Bioinformatics investigation on blood-based gene expressions of Alzheimer's disease revealed ORAI2 gene biomarker susceptibility: An explainable artificial intelligence-based approach. Metabolic Brain Disease",
+                "author": "Kumar, N., et al. (2023)",
+                "link": "https://doi.org/10.1007/s11011-023-01171-0"
+            },
+            {
+                "title": "A unified approach to interpreting model predictions",
+                "author": "Lundberg, S. M., & Lee, S. I. (2017)",
+                "link": ""
+            },
+            {
+                "title": "Methods for interpreting and understanding deep neural networks",
+                "author": "Montavon, G., Samek, W., & Müller, K. R. (2018)",
+                "link": ""
+            },
+            {
+                "title": "XAI-MethylMarker: Explainable AI approach for biomarker discovery for breast cancer subtype classification using methylation data. Expert Systems with Applications",
+                "author": "Rajpal, S., Rajpal, A., Saggar, A., Vaid, A. K., Kumar, V., Agarwal, M., & Kumar, N. (2023)",
+                "link": "https://doi.org/10.1016/j.eswa.2023.120130"
+            },
+            {
+                "title": "\"Why should I trust you?\": Explaining the predictions of any classifier",
+                "author": "Ribeiro, M. T., Singh, S., & Guestrin, C. (2016)",
+                "link": ""
+            },
+            {
+                "title": "ProteomicsDB",
+                "author": "Schmidt, T., Samaras, P., Frejno, M., Gessulat, S., Barnert, M., Kienegger, H., ... & Wilhelm, M. (2018)",
+                "link": ""
+            },
+            {
+                "title": "Learning important features through propagating activation differences",
+                "author": "Shrikumar, A., Greenside, P., & Kundaje, A. (2017)",
+                "link": ""
+            },
+            {
+                "title": "A survey on explainable artificial intelligence (XAI): Toward medical transparency. Neurocomputing",
+                "author": "Tjoa, E., & Guan, C. (2021)",
+                "link": "https://doi.org/10.1016/j.neucom.2020.09.021"
+            },
+            {
+                "title": "The Cancer Genome Atlas (TCGA): An immeasurable source of knowledge",
+                "author": "Tomczak, K., Czerwińska, P., & Wiznerowicz, M. (2015)",
+                "link": ""
+            },
+            {
+                "title": "AI-driven transcriptomic biomarker discovery using Graph Neural Networks",
+                "author": "Wang, X., et al. (2023)",
+                "link": ""
+            },
+            {
+                "title": "Learning deep features for discriminative localization",
+                "author": "Zhou, B., Khosla, A., Lapedriza, A., Oliva, A., & Torralba, A. (2016)",
+                "link": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,79 @@
+[
+    {
+        "type": "Problem Statement",
+        "description": "Biomarkers play an important role in disease diagnosis, prognosis, and treatment selection. Conventional techniques for biomarker discovery face challenges such as data complexity, lack of reproducibility, and poor interpretability, hindering clinical integration. The advent of machine learning (ML) and artificial intelligence (AI) has advanced biomarker identification by enabling analysis of high-dimensional genomic, transcriptomic, and proteomic datasets. However, the black-box nature of deep learning models limits their interpretability, fostering skepticism among healthcare professionals and impeding clinical translation.",
+        "project_aims": [
+            "Develop an explainable AI-powered biomarker prediction framework by:",
+            "Employing multiple ML and DL models (e.g., SVM, RF, FFN, AutoEncoders) to enhance biomarker detection accuracy.",
+            "Using publicly available biomedical datasets (TCGA, GEO, ProteomicsDB) to identify potential biomarkers for various diseases.",
+            "Integrating Explainable AI (XAI) methodologies like SHAP and LIME to ensure transparency and interpretability of predictions."
+        ],
+        "intention": "By combining state-of-the-art ML techniques with XAI-driven insights, this project aims to bridge the gap between AI-powered biomarker discovery and clinical applications, prioritizing clinical relevance and interpretability for medical professionals."
+    },
+    {
+        "type": "Motivation",
+        "description": "While AI and ML models excel at uncovering biomarkers from large genomic and proteomic datasets, their lack of transparency remains a barrier to clinical adoption. Interpretability is critical to gaining clinicians' trust in AI recommendations for personalized medicine.",
+        "goals_to_improve_transparency": [
+            {
+                "title": "High-Dimensionality and Complexity of Biomedical Data",
+                "content": "Genomic, proteomic, and transcriptomic data are high-dimensional, rendering traditional statistical analysis inadequate. AI methods can identify valuable patterns, but XAI techniques are essential to explain the model's findings."
+            },
+            {
+                "title": "Building Links Between AI Research and Clinical Practice",
+                "content": "Most AI-based biomarker models lack clinical validation due to low interpretability. This project ensures AI predictions align with biomedical knowledge through XAI, fostering adoption in real-world healthcare settings."
+            },
+            {
+                "title": "Potential for Progress in Personalized Medicine",
+                "content": "Explainable AI in biomarker discovery can improve early disease diagnosis and treatment tailoring, advancing precision medicine where treatments are customized based on individual biomarker profiles."
+            },
+            {
+                "title": "Advancing AI Ethics and Regulatory Compliance",
+                "content": "AI healthcare models must meet regulatory standards (e.g., FDA, EMA) emphasizing explainability. Integrating XAI helps satisfy these standards, paving the way for clinical deployment of AI-based biomarker tools."
+            }
+        ]
+    },
+    {
+        "type": "Objectives",
+        "list": [
+            "Utilize public biomedical datasets (TCGA, GEO, ProteomicsDB) for model training and validation.",
+            "Implement Explainable AI (XAI) techniques such as SHAP, LIME, etc., to enhance model transparency.",
+            "Evaluate model performance using metrics like AUC-ROC, F1-score, precision, and recall.",
+            "Compare different interpretability methods and assess their effectiveness in biomarker discovery."
+        ]
+    },
+    {
+        "type": "Goals",
+        "list": [
+            "Establish a trustworthy biomarker identification system characterized by accuracy and interpretability.",
+            "Ensure models are comprehensible to medical professionals for real-world application.",
+            "Publish research findings to advance AI applications in healthcare.",
+            "Provide an open-source framework for future AI-enabled biomedical research."
+        ]
+    },
+    {
+        "type": "Reference Algorithm",
+        "dataset": "TCGA LUAD & LUSC Dataset",
+        "description": "This project adopts an XAI-guided deep learning approach for lung cancer prediction, utilizing a framework with two blocks.",
+        "blocks": [
+            {
+                "title": "BLOCK A: AutoEncoder and Feed Forward Neural Network",
+                "content": [
+                    "AutoEncoder reduces feature space from 20,115 genes to a compressed latent space of 2,048 features.",
+                    "Feed Forward Neural Network performs binary classification (LUAD vs. LUSC) on the encoded 2,048 features.",
+                    "Activation functions: ReLU in hidden layers, Sigmoid for binary classification."
+                ],
+                "image": "images/autoencoder.png",
+                "imagetitle":"Enlightening the path to NSCLC biomarkers: Utilizing the power of XAI-guided deep learning, Block-A diagram"
+            },
+            {
+                "title": "BLOCK B: Feature Identifier",
+                "content": [
+                    "SHAP (Shapley Additive Explanations): Computes global and local feature importance based on Shapley values, identifying gene contributions to classification outcomes.",
+                    "LIME (Local Interpretable Model-Agnostic Explanations): Perturbs input features and learns a local interpretable model for each sample, providing instance-wise explanations for individual predictions."
+                ],
+                "image":"images/NSCLCbiomarker.png",
+                "imagetitle":"Enlightening the path to NSCLC biomarkers: Utilizing the power of XAI-guided deep learning, Block-A diagram"
+            }
+        ]
+    }
+]

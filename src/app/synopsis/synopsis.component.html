@@ -1,0 +1,52 @@
+@for (item of synopsisData; track $index) {
+    @switch (item.type) {
+
+        <!-- SWOT Analysis -->
+        @case ("SWOT Analysis") {
+            <div class="synopsis__references">
+                <h2 class="text-3xl">{{ item.type|titlecase}}</h2>
+                <div class="text-base text-black/[0.8] mt-5 px-5">
+                    <p>{{item.description}}</p>
+                    <ul class="flex flex-col space-y-2 mt-5">
+                        @for (contents of item.list_pairs; track $index) {
+                            <li class="font-semibold">{{contents.title}}</li>
+                            @for (strings of contents.content; track $index) {
+                                @if ($index !=0) {
+                                    <li class="text-justify text-sm">{{strings|paragraph}}</li>
+                                }@else {
+                                    <li class="text-justify text-sm">{{strings}}</li>
+                                }
+                            }
+                            
+                        }
+                    </ul>
+                </div>
+                
+            </div>
+
+            <hr class="my-5 text-black/[0.1]">
+        }
+
+        <!-- references -->
+        @case ("references") {
+            <div class="synopsis__references">
+                <h2 class="text-3xl">{{ item.type|titlecase}}</h2>
+                <ul class="flex flex-col space-y-2 mt-5">
+                    @for (ref of item.values; track $index) {
+                        <li class="p-5 flex gap-5 bg-white shadow shadow-black/[0.1] m-2 rounded-xl  hover:scale-[0.98] transition-all">
+                            <img src="icons/anchor.svg" class="h-5 w-5 rotate-45">
+
+                            <a href="{{ ref.link }}" class="text-sm cursor-pointer">
+                                {{ ref.title }}
+                                <p class="text-xs mt-1 text-black/[0.5]">{{ref.author}}</p>
+                            </a>
+                            
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+       
+    }
+}
